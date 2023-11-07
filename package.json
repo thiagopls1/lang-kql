@@ -4,8 +4,9 @@
   "description": "KQL language support for the CodeMirror code editor",
   "main": "index.ts",
   "scripts": {
-    "test": "node index.js",
-    "dev": "npx nodemon"
+    "dev": "npx nodemon",
+    "test": "cm-runtests",
+    "prepare": "cm-buildhelper src/kql.ts"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,17 @@
   },
   "homepage": "https://github.com/thiagopls1/lang-kql#readme",
   "devDependencies": {
+    "@codemirror/buildhelper": "^1.0.0",
     "@types/node": "^20.8.10",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.10.2",
+    "@codemirror/highlight": "^0.19.8",
+    "@codemirror/state": "^6.3.1",
+    "@lezer/highlight": "^1.1.6",
+    "@lezer/lr": "^1.3.14"
   }
 }
